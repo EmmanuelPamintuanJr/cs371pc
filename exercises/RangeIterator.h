@@ -36,11 +36,15 @@ class Range_Iterator {
         const T& operator * () const {
             return _v;}
 
+        //l-value
+        
         Range_Iterator& operator ++ () {
             ++_v;
             return *this;}
         
         //returns const so that user cannot modify the returned value;
+        //r-value
+        
             const Range_Iterator operator ++ (int) {
             Range_Iterator x = *this;
             ++*this;
