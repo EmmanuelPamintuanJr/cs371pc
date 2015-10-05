@@ -39,8 +39,9 @@ class Range_Iterator {
         Range_Iterator& operator ++ () {
             ++_v;
             return *this;}
-
-        Range_Iterator operator ++ (int) {
+        
+        //returns const so that user cannot modify the returned value;
+            const Range_Iterator operator ++ (int) {
             Range_Iterator x = *this;
             ++*this;
             return x;}};
